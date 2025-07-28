@@ -1,0 +1,589 @@
+/* App.css */
+.App{
+  background-image: url("Lower.png");
+}
+.container{
+  background-image: url("Bg.jpg");
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow-x: hidden;
+  color: black;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  background: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 4px 4px;
+  animation: ashes 8s linear infinite;
+  z-index: 0;
+}
+
+@keyframes ashes {
+  0% { background-position: 0 0; }
+  100% { background-position: -100% -100%; }
+}
+
+.App {
+  text-align: center;
+  padding: 40px 20px;
+  z-index: 1;
+  position: relative;
+  animation: fadeInApp 2s ease;
+}
+
+@keyframes fadeInApp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+  
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  max-width: 1200px;
+  margin: auto;
+  z-index: 2;
+  position: relative;
+}
+
+.animated-title {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+  from { text-shadow: 2px 2px 10px #ffccbc; }
+  to { text-shadow: 2px 2px 20px #ffffff; }
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.form input,
+.form select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  background-color: #fff8f0;
+  color: black; /* ✅ Make text color black */
+}
+
+.form input:focus,
+.form select:focus {
+  outline: none;
+  border-color: #ffffff;
+  box-shadow: 0 0 12px #ffffff;
+  transform: scale(1.03);
+}
+
+.animated-button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  background-color: white;
+  color: #ff6600;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.animated-button:hover {
+  background-color: #ffe0b2;
+  box-shadow: 0 0 25px #fff3e0;
+  transform: scale(1.07);
+}
+
+.result {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #d84315;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  animation: fadeInResult 1s ease;
+}
+
+@keyframes fadeInResult {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.health-tips {
+  background-color: rgba(255, 102, 0, 0.85);
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.safe {
+  background-color: rgba(0, 153, 76, 0.85);
+}
+.h1{
+  color:white;
+}
+.h2{
+  font-weight: bold;
+}
+select option {
+  background: #fff8f0;
+}
+.animated-button1 {
+  justify-self: center;
+  background-color: white;
+  color: #ff6600;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+
+.upper {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  position: fixed;       
+  top: 0;                
+  left: 0;
+  width: 95%;           
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 700;         /* Keeps it above other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  background-image: url('./Bg.jpg');
+}
+
+.logo {
+  width: 9rem;
+  height: auto;
+}
+
+.header-menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-weight: 500;
+ 
+}
+
+
+
+.header-menu > li:hover {
+  cursor: pointer;
+  color: var(--orange, orange);
+}
+.container{
+  margin-top: 100px;
+}
+
+
+/* General Styling */
+.result-container {
+  margin-top: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.danger-text {
+  color:#ccc;
+  background-color: red;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.safe-text {
+  color: white;
+  background-color: green;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tips-section h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.tips-section ul {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.tips-section li {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.tips-section li ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.tips-section li ul li {
+  font-size: 16px;
+  color: #555;
+}
+
+.tips-section li strong {
+  font-weight: bold;
+}
+
+.tips-section li ul li {
+  margin-bottom: 10px;
+}
+
+/* Animation for health tips */
+.tips-section ul li {
+  animation: fadeIn 0.8s ease-out;
+}
+
+
+
+/* result container */
+.result-container {
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  background: #f9fafc;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 1s ease-in;
+  transition: all 0.3s ease-in-out;
+}
+
+/* danger and safe result heading */
+.result-danger {
+  color: #e63946;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.result-safe {
+  color: green;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* bmi section */
+.bmi-info {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.bmi-info h3 {
+  font-size: 1.3rem;
+  color: #264653;
+}
+
+.bmi-under {
+  color: #3b82f6;
+}
+
+.bmi-normal {
+  color: #10b981;
+}
+
+.bmi-over {
+  color: #f59e0b;
+}
+
+.bmi-obese {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+/* tips card */
+.tips-card {
+  background-color: #ffffff;
+  border-left: 6px solid #2a9d8f;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out;
+  animation: slideUp 1s ease-in-out;
+}
+
+.tips-card:hover {
+  transform: translateY(-5px);
+}
+
+.tips-card h3 {
+  color: #1d3557;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* tips list */
+.tips-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tips-card li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.tips-card li ul {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.tips-card li ul li {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* animations */
+
+.hero{
+  display:flex;
+  justify-content:space-between;
+  gap:2rem;
+}
+.left-h{
+  padding:2rem;
+  padding-top:1.5rem;
+  flex:3;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+}
+.right-h{
+  flex:1;
+  position:relative;
+ background-color:var(--orange);
+}
+.the-best-ad{
+  background-color: rgb(45, 44, 44);
+  margin-top:4rem;
+  border-radius:4rem;
+  width:fit-content;
+  padding:20px 13px;
+  text-transform:uppercase;
+  color:white;
+  display:flex;
+  position:relative;
+  align-items: center;
+  justify-content: flex-start;
+}
+.the-best-ad>span{
+  z-index:2;
+}
+.the-best-ad>div{
+  position:absolute;
+  background-color: var(--orange);
+  width: 5.4rem;
+  height:80%;
+  left:8px;
+  border-radius: 3rem;
+  z-index:1;
+}
+.hero-text{
+  display: flex;
+  flex-direction:column;
+  gap: 1.5rem;
+  text-transform:uppercase;
+  font-size:6rem;
+  font-weight:bold;
+  color:black;
+  text-overflow:inherit;
+}
+.hero-text>div:nth-of-type(3){
+  font-size: 1rem;
+  font-weight: 200;
+  text-transform: none;
+  letter-spacing: 1px;
+  width: 80%;
+}
+.figure {
+  display: flex;
+  flex-direction: row; /* Ensures the figures are in a horizontal direction */
+  gap: 2rem;
+}
+
+
+
+
+
+.figures > div > span:nth-of-type(2) {
+  color: var(--gray);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* Adds spacing between .figures and .hero-buttons */
+.upper {
+  background-image: url("Bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+/* 1. WRAPPER & BG OVERLAY */
+.left-h {
+  position: relative;
+  padding: 4rem 5%;
+  background: 
+    linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2)),
+    url("Bg.jpg") center/cover no-repeat;
+  overflow: hidden;
+}
+
+/* 2. TAGLINE “THE BEST VIRTUAL FITNESS WEBSITE” */
+.the-best-ad span {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fff;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* 3. MAIN HERO TEXT */
+.hero-text {
+  margin-top: 2rem;
+}
+.hero-text div {
+  overflow: hidden;
+}
+.hero-text span {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+  transform: translateY(120%);
+  animation: slideIn 0.7s ease-out forwards;
+}
+.hero-text div:nth-child(1) span:nth-child(1) { animation-delay: 0.5s; }
+.hero-text div:nth-child(1) span:nth-child(2) { animation-delay: 0.7s; }
+.hero-text div:nth-child(2) span         { animation-delay: 0.9s; }
+
+/* 4. STROKE EFFECT */
+.stroke-text {
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+  animation: glowStroke 2s ease-in-out infinite alternate;
+}
+
+/* 5. BUTTON + TEXT ROW */
+.upper1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+/* 6. CURVED “Watch Now” BUTTON */
+.curve-btn {
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255,75,43,0.4);
+  cursor: pointer;
+  transform: scale(0.9);
+  opacity: 0;
+  animation: popIn 0.6s ease-out forwards;
+  animation-delay: 1.2s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.curve-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(255,75,43,0.6);
+}
+
+/* 7. SUPPORTING DESCRIPTION TEXT */
+.text-container span {
+  font-size: 1.15rem;
+  color: #fff;
+  max-width: 380px;
+  text-align: right;
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease-out forwards;
+  animation-delay: 1.4s;
+}
+
+/* 8. KEYFRAMES */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0);     }
+}
+@keyframes slideIn {
+  from { transform: translateY(120%); }
+  to   { transform: translateY(0);    }
+}
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.7); }
+  to   { opacity: 1; transform: scale(0.9); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0);     }
+}
+@keyframes glowStroke {
+  from { -webkit-text-stroke-color: #fff; }
+  to   { -webkit-text-stroke-color: #ff4b2b; }
+}
