@@ -98,3 +98,12 @@ Verified and tested using Postman for both ML endpoints
 📁 Database Integration: Inputs and results can be stored for historical tracking and analytics (if connected)
 
 🧠 Awareness-Focused: Designed for users with limited medical knowledge (BMI awareness, fasting sugar level, etc.)
+
+
+
+Screenshots of the projects-
+
+<img width="1864" height="896" alt="Screenshot (35)" src="https://github.com/user-attachments/assets/fb4ee7b7-0924-402f-bef1-421fa9b76cfd" />
+
+<img width="1912" height="917" alt="Screenshot 2025-07-21 175150" src="https://github.com/user-attachments/assets/cf73d709-58b3-4536-8da1-c8d2ca833a28" />
+<img width="1911" height="917" alt="Screenshot 2025-07-21 175622" src="https://github.com/user-attachments/assets/01bc9cf4-f393-40c7-b187-df19e4c83552" />
